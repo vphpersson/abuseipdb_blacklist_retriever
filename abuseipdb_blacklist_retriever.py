@@ -36,7 +36,7 @@ class AbuseIPDBReporterArgumentParser(ArgumentParser):
             '-c', '--config',
             required=True,
             help='The path of a configuration file.',
-            type=FileType(mode='r')
+            type=FileType(mode='rb')
         )
 
 
