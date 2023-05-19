@@ -8,7 +8,7 @@ from argparse import ArgumentParser, FileType
 
 from ecs_tools_py import make_log_handler
 from httpx import AsyncClient
-from toml import load as toml_load
+from tomllib import load as tomllib_load
 
 from abuseipdb_blacklist_retriever import LOG, ABUSEIPDB_BASE_URL, retrieve_blacklist
 
@@ -52,7 +52,7 @@ LOG.setLevel(level=INFO)
 
 async def main():
     try:
-        config = Config(**toml_load(AbuseIPDBReporterArgumentParser().parse_args().config))
+        config = Config(**tomllib_load(AbuseIPDBReporterArgumentParser().parse_args().config))
 
         ip_addresses: set[str] = set()
 

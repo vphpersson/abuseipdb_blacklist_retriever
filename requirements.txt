@@ -1,3 +1,2 @@
 git+https://github.com/vphpersson/ecs_tools_py.git#egg=ecs_tools_py
 httpx
-toml
